@@ -1,0 +1,39 @@
+#testimonials
+  background: $off-white
+  border-radius: 0 0 50% 50%
+  text-align: center
+
+  .test-wrap
+    position: relative
+    .test-item
+      .test
+        font-style: italic
+      .patient
+        font-weight: 700
+        font-size: 1rem
+    .prev,
+    .next
+      +center(y)
+      font-size: 1.3rem
+      cursor: pointer
+      padding: 0.2rem 1rem
+      width: 2.5rem
+      height: 2.5rem
+      border-radius: 50%
+      +transition(fast)
+      &:hover
+        background: rgba($secondary, 0.5)
+        & i
+          color: $off-white
+      i
+        line-height: 1.2
+
+    .next
+      right: 0
+      +bp(sm)
+        right: -1rem
+    .prev
+      left: 0
+      +bp(sm)
+        left: -1rem
+

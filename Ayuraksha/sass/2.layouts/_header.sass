@@ -1,0 +1,86 @@
+.main-header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: $top
+  +transition(fast)
+
+  &.fixed
+    box-shadow: 0 5px 7px rgba($black, 0.2)
+    background: $dark
+    padding: 0
+
+  +bp(sm)
+    padding: 1rem 0
+
+  .row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  
+  .contact
+    text-align: center
+    padding: 0.5rem 0
+    position: relative
+    background: $dark
+    color: $white
+    +bp(sm)
+      padding: 0
+      background: none
+      text-align: left
+
+    .phone-icon
+      border: 1px solid $white
+      width: 1.5rem
+      height: 1.5rem
+      border-radius: 50%
+      display: inline-block
+      position: relative
+      i
+        +center
+
+  .brand
+    img
+      width: 120px
+      padding: 0.5rem 0
+      +bp(sm)
+        display: block
+        margin: auto
+
+  .menu-wrap
+    margin-left: auto
+    +flex(row, flex-end, center)
+
+    .menu-text
+      text-align: right
+      margin-right: 0.5rem
+      color: $white
+
+    .toggler
+      width: 2rem
+      height: 1.4rem
+      cursor: pointer
+
+      .toggler-icon,
+      .toggler-icon:before,
+      .toggler-icon:after
+        border-radius: 5px
+        background: $white
+        height: 4px
+        width: 100%
+
+      .toggler-icon
+        position: relative
+        &:before,
+        &:after
+          +pseudo
+        &:before
+          top: 8px
+        &:after
+          top: 16px
+        
+
+
+
+
